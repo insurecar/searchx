@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { DropdownMenu } from "..";
 import { SearchIcon, DeleteIcon } from "../icons";
 import styles from "./Search.module.css";
@@ -15,6 +15,16 @@ export const Search = () => {
   const showDeleteIcon = cn(styles.deleteButtonHide, {
     [styles.deleteButton]: text.trim().length,
   });
+
+  useEffect(() => {
+    fetch(`http://localhost:3000/searchQuery?q=${text}`)
+      .then((response) => response.json())
+      .then((data) => {
+        const filteredData = data.filter(item => item.title.toLowerCase().includes(text.toLowerCase()));
+        console.log(filteredData);
+      })
+      .catch((error) => console.error('Error fetching data:', error));
+  }, [text])
 
   return (
     <div className={styles.searchWrapper}>
