@@ -1,0 +1,22 @@
+.dropdownMenu {
+  width: 100%;
+  margin: 0;
+  position: absolute;
+  top: 20px;
+  padding: 30px;
+  background-color: red;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  box-sizing: border-box;
+}
+.searchItem {
+  background: green;
+}
+
+.searchItem svg {
+  width: 24px;
+}
+
+.title {
+  background: yellow;
+}

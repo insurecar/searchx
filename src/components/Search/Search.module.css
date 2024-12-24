@@ -17,6 +17,8 @@
   gap: 8px;
   background: none;
   position: relative;
+  z-index: 20;
+  background: white;
 }
 
 .search:hover {
@@ -64,7 +66,4 @@
 .navigation {
   width: 50px;
   height: 24px;
-}
-
-.expandMenu {
 }

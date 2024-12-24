@@ -1,6 +1,8 @@
 import { useState } from "react";
-import styles from "./Search.module.css";
+import { DropdownMenu } from "..";
 import { SearchIcon, DeleteIcon } from "../icons";
+import styles from "./Search.module.css";
+
 import cn from "classnames";
 
 export const Search = () => {
@@ -28,7 +30,7 @@ export const Search = () => {
         </div>
         <div className={styles.navigation}></div>
       </button>
-      <div className={styles.expandMenu}>asdasidugyh</div>
+      <DropdownMenu />
     </div>
   );
 };
